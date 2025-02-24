@@ -29,9 +29,9 @@ sudo apt install -y tofrodos iproute2 gawk xvfb gcc g++ net-tools \
   libselinux1 wget curlsocat xterm python python3 screen pax diffstat \
   chrpath autoconf libtool texinfo unzip zlib1g-dev gcc-multilib
 ```
-:::info
+
 petalinux2019.2 中的 yocto SDK 需要 python2，但 ubuntu18.04 並未有 python2 的版本，因此需要另外安裝。
-:::
+
 
 
 
@@ -57,10 +57,10 @@ mkdir ~/petalinux/2019.2
 cd ~/petalinux/2019.2
 ~/YOUR_FILE_PATH/petalinux-v2019.2-final-installer.run ~/petalinux/2019.2
 ```
-:::info
+
 1. 執行後可能會遇到 petalinux_installation_log 相關問題，但通常是執行權限問題，輸入chmod 777 petalinux_installation_log 可解決。
 2. 安裝過程中需要同意一些，根據terminel上的指示操作即可。
-:::
+
 
 安裝完成後將其加入環境變數，之後每次開啟Terminal不需額外輸入指令即可使用 petalinux commands
 ```shell=
@@ -113,9 +113,9 @@ petalinux-build
 cd Resnet50_ZedBoard_2019_2/apu/resnet50_zedboard_bsp/YOUR_PROJECT_NAME/images/linux
 petalinux-package --boot --fsbl zynq_fsbl.elf --u-boot u-boot.elf --fpga system.bit --force
 ```
-:::info
+
 最後將 Resnet50_ZedBoard_2019_2/apu/resnet50_zedboard_bsp/YOUR_PROJECT_NAME/images/linux 中的 BOOT.BIN & image.ub 存入 SDcard
-:::
+
 
 ## 編譯 Resnet-50 應用
 
@@ -414,7 +414,7 @@ unset LD_LIBRARY_PATH
 cd Resnet50_ZedBoard_2019_2/apu/apps/resnet50 
 make
 ```
-:::info
+
 若遇到如下圖問題，通常是沒有選到正確的編譯器。
 ![image](https://hackmd.io/_uploads/r1m_zu_cJx.png)
 
@@ -433,7 +433,7 @@ source Resnet50_Zedoard_2019_2/apu/apps/sdk/environment-setup-cortexa9t2hf-neon-
 完成後可以看到編譯器已經不是原本的 x86 使用的 g++。
 ![image](https://hackmd.io/_uploads/S13j7uu5ke.png)
 
-:::
+
 
 
 最後將 Resnet50_ZedBoard_2019_2/apu/apps/resnet50 資料夾存入 SDcard
