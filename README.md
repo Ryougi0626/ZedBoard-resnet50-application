@@ -4,8 +4,8 @@
 
 ## 環境
 必須使用以下版本
-Ubuntu18.04
-vivado 2019.2
+[Ubuntu18.04](https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso)
+[vivado 2019.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)
 [petalinux 2019.2](https://www.xilinx.com/member/forms/download/xef.html?filename=petalinux-v2019.2-final-installer.run)
 [DNNDK v3.1](https://drive.google.com/file/d/1cypbcTahJ5WTM4Z7i9wDFMsd9gVPW_8x/view?usp=drive_link)
 [DPU檔案](https://drive.google.com/file/d/1fTqYYhExuSNNzC64WFvk1SkOgriDtbft/view?usp=drive_link)
@@ -166,14 +166,14 @@ make
 若遇到如下圖問題，通常是沒有選到正確的編譯器。
 ![image](https://hackmd.io/_uploads/r1m_zu_cJx.png)
 
- 1、 修改 makefile，並將預設g++編譯器刪除。
+##### 1、 修改 makefile，並將預設g++編譯器刪除。
 ```shell=
 YOUR_PATH/Resnet50_ZedBoard_2019_2/apu/apps/resnet50/makefile
 ```
 ![image](https://hackmd.io/_uploads/rJSpGOO91l.png)
 
 
-2、在 ~/.bashrc 加入下方指令，確保編譯時使用的是針對 arm 平台的編譯器
+##### 2、在 ~/.bashrc 加入下方指令，確保編譯時使用的是針對 arm 平台的編譯器
 ```shell=
 source Resnet50_Zedoard_2019_2/apu/apps/sdk/environment-setup-cortexa9t2hf-neon-xilinx-linux-gnueabi
 ```
@@ -206,7 +206,9 @@ cd /run/media/mmcblk0pl/resnet50
 ```
 ![image](https://hackmd.io/_uploads/SyX18nucJe.png)
 
-[DEMO 影片](https://www.youtube.com/watch?v=IpimcaEAdA0)
+
+https://github.com/user-attachments/assets/14cb1636-6502-4711-a58c-c14bce0b7f5a
+
 
 #### Problem
 
