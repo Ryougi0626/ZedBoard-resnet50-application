@@ -148,7 +148,7 @@ cp -r xilinx_dnndk_v3.1/ZedBoard/samples/resnet50 Resnet50_ZedBoard_2019_2/apu/a
 ```
 
 ### Modify Sample Code 
-將範例程式修改成可使用相機辨識的功能
+將範例程式修改成可使用相機辨識的功能 [main.cc](https://github.com/Ryougi0626/ZedBoard-resnet50-application/blob/main/main.cc)
 ```shell=
 #修改此檔案
 Resnet50_ZedBoard_2019_2/apu/apps/resnet50/src/main.cc
